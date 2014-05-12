@@ -1,7 +1,7 @@
 exp-ang-sio
 ===========
 
-Express 4 + Angular + Socket.io minimal example application
+[Express 4](https://github.com/visionmedia/express) + [Angular](https://angularjs.org/) + [Socket.io](http://socket.io/) minimal example application
 
 
 
