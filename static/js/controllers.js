@@ -1,36 +1,12 @@
 'use strict';
 
-
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getThreeNumbers(){
-    var ret=[0,0,0];
-    for (var i=0; i<3; i++){
-	ret[i] = getRandomInt(i*20, 666);
-    };
-    return ret;
-};
-
-
-function setChartData(){
-    return {
-	series: ['Sales', 'Income', 'Expense', 'Laptops', 'Keyboards'],
-	data: [{
-	    x: "Laptops",
-	    y: getThreeNumbers()
-	}, {
-	    x: "Desktops",
-	    y: getThreeNumbers()
-	}, {
-	    x: "Mobiles",
-	    y: getThreeNumbers()
-	}, {
-	    x: "Tablets",
-	    y: getThreeNumbers()
-	}]
-    };
+function getChartRandType(){
+    var chartTypes = ['area','bar','line','pie'];
+    return chartTypes[getRandomInt(0, chartTypes.length-1)];
 };
 
 easApp.controller('mainCtrl', function($scope, mySocket) {
@@ -56,31 +32,13 @@ easApp.controller('mainCtrl', function($scope, mySocket) {
 	position: 'right'
 	}
     };
-    
-    $scope.chartData = setChartData();
-    
-    setInterval(function(){
-	$scope.chartData = setChartData();	
-    }, 5000);
-    
-    /*
-    $scope.chartData = {
-	series: ['Sales', 'Income', 'Expense', 'Laptops', 'Keyboards'],
-	data: [{
-	    x: "Laptops",
-	    y: [100, 500, 0],
-	    tooltip: "this is tooltip"
-	}, {
-	    x: "Desktops",
-	    y: [300, 100, 100]
-	}, {
-	    x: "Mobiles",
-	    y: [351]
-	}, {
-	    x: "Tablets",
-	    y: [54, 0, 879]
-	}]
-    };
-    */
+    //
+    $scope.chartType = 'bar';
+    mySocket.on('send:chartdata', function (data) {
+	// change chart type
+	$scope.chartType = getChartRandType();
+	// set chart data
+	$scope.chartData = data.data;
+    });
     
 });

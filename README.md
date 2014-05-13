@@ -9,7 +9,8 @@ Used components:
 * [Express 4](https://github.com/visionmedia/express) 
 * [Socket.io](http://socket.io/) 
 * [angular-socket-io](https://github.com/btford/angular-socket-io)
-* [Angular](https://angularjs.org/) 
+* [AngularJS](https://angularjs.org/) 
+* [Angular-charts](http://chinmaymk.github.io/angular-charts/#)
 
 
 
