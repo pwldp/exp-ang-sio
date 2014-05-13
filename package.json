@@ -2,6 +2,7 @@
   "name": "exp-ang-sio",
   "main": "app.js",
   "dependencies": {
-    "express": "~4.1.1"
+    "express": "~4.1.1",
+    "socket.io": "~0.9.16"
   }
 }

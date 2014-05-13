@@ -9,7 +9,10 @@
     <link rel="shortcut icon" href="favicon.ico">
     <title>Express + Angular + Socket.io</title>
     
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="js/socket.js"></script>
     
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -25,6 +28,9 @@
 	<p>
 	    Angular main controller status: <strong>{{ang_ctrl_status}}</strong>
 	</p>
+	<p>
+	Date and time from server: {{dt_from_server}}
+	</p>
     </div>
     
     
@@ -33,5 +39,6 @@
 	    Source at <a href="https://github.com/pwldp/exp-ang-sio">Github</a>
 	</p>
     </center>
+    
 </body>
 </html>

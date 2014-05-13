@@ -1,7 +1,16 @@
 exp-ang-sio
 ===========
 
-[Express 4](https://github.com/visionmedia/express) + [Angular](https://angularjs.org/) + [Socket.io](http://socket.io/) minimal example application
+Minimal example application AngularJS with Socket.io inspired by [angular-socket-io-seed](https://github.com/btford/angular-socket-io-seed)
+
+
+Used components:
+
+* [Express 4](https://github.com/visionmedia/express) 
+* [Socket.io](http://socket.io/) 
+* [angular-socket-io](https://github.com/btford/angular-socket-io)
+* [Angular](https://angularjs.org/) 
+
 
 
 
